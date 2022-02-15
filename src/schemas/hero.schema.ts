@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, PostMiddlewareFunction } from 'mongoose';
+import { Power } from './power.schema';
 
 export type HeroDocument = Hero & Document;
 
@@ -7,5 +8,8 @@ export type HeroDocument = Hero & Document;
 export class Hero {
   @Prop({ required: true })
   name: string;
+
+  @Prop()
+  powers: Power[];
 }
 export const HeroSchema = SchemaFactory.createForClass(Hero);
