@@ -11,7 +11,7 @@ import { identity } from 'rxjs';
 import { Hero, HeroDocument } from 'src/schemas/hero.schema';
 import { HeroService } from './hero.service';
 
-@Controller('heroes')
+@Controller('hero')
 export class HeroController {
   constructor(private readonly heroService: HeroService) {}
 
@@ -40,6 +40,6 @@ export class HeroController {
 
   @Delete(':id')
   async deleteHero(@Param('id') id: string) {
-    return await this.deleteHero(id);
+    return await this.heroService.deleteHero(id);
   }
 }
