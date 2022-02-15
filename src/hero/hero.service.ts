@@ -5,7 +5,9 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { async } from 'rxjs';
 import { Hero, HeroDocument } from 'src/schemas/hero.schema';
+import { Power } from 'src/schemas/power.schema';
 
 @Injectable()
 export class HeroService {

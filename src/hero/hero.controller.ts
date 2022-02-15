@@ -40,6 +40,6 @@ export class HeroController {
 
   @Delete(':id')
   async deleteHero(@Param('id') id: string) {
-    return await this.deleteHero(id);
+    return await this.heroService.deleteHero(id);
   }
 }

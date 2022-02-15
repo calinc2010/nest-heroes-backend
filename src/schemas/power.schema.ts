@@ -4,9 +4,9 @@ export type PowerDocument = Power & Document;
 
 @Schema()
 export class Power {
-  @Prop()
+  @Prop({ require: true })
   name: string;
-  @Prop()
+  @Prop({ require: true })
   level: number;
 }
 
