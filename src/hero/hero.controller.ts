@@ -7,7 +7,6 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { identity } from 'rxjs';
 import { Hero, HeroDocument } from 'src/schemas/hero.schema';
 import { HeroService } from './hero.service';
 
