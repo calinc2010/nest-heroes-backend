@@ -11,7 +11,7 @@ import { identity } from 'rxjs';
 import { Hero, HeroDocument } from 'src/schemas/hero.schema';
 import { HeroService } from './hero.service';
 
-@Controller('heroes')
+@Controller('hero')
 export class HeroController {
   constructor(private readonly heroService: HeroService) {}
 
