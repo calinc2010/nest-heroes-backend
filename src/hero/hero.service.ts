@@ -32,7 +32,7 @@ export class HeroService {
   async getHero(id: string) {
     try {
       const foundHero = await this.heroModel.findById(id).exec();
-      if (foundHero) return;
+      if (foundHero) return foundHero;
       else {
         return new NotFoundException();
       }
