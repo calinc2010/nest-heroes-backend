@@ -17,7 +17,7 @@ export class PowerController {
   constructor(private readonly powerService: PowerService) {}
 
   @Put(':id')
-  async updatePowersByHeroId(
+  async updatePowerByHeroId(
     @Body() updatedPower: PowerDocument,
     @Param('id') id: string,
   ) {
@@ -32,7 +32,7 @@ export class PowerController {
     return await this.powerService.deletePowerByHeroId(id, power);
   }
 
-  @Post('add/:id')
+  @Post(':id')
   async addPower(@Param('id') id: string, @Body() newPower: PowerDocument) {
     return await this.powerService.addPowerToHeroId(id, newPower);
   }
